@@ -1,4 +1,4 @@
-[Top Image](Assets/background.png)
+[Top Image](Assets/Background.png)
 
 # projects
 
