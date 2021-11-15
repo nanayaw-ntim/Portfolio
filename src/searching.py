@@ -1,3 +1,23 @@
+# Scans through all the elements in an array for a wanted number
+def LinearSearch(Array):
+    print(Array)
+    itemWanted = int(input("Please select a number you want : "))
+    itemFound = False
+    itemIndex = 0
+
+    for ind in range(len(Array)):
+        if itemWanted == Array[ind]:
+            itemFound = True
+            itemIndex = ind
+            break
+        else:
+            itemFound = False
+
+    if itemFound:
+        print(f"Item found at index : {itemIndex}")
+    else:
+        print("Item not in store")
+
 # Allows user to select a searching mechanism
 def Menu(Array):
     print("Searching Mechanisms Available\n"
