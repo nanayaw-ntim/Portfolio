@@ -8,7 +8,7 @@ Here's a list of all the things here:
 
 1. Sorting Algorithms:
    - [ ] Insertion Sort
-   - [ ] Bubble Sort
+   - [x] Bubble Sort
 
 2. Searching Algorithms
    - [ ] Binary Search
