@@ -1,7 +1,20 @@
+""" Structure your code well """
+
+# Sorts array given using relatively unreliable speed
 def BubbleSort(Array):
-	unsortedArray = Array
+	sortingArray = Array
+	sortedArray = []
 
+	# Loops through array to sort elements
+	for i in range(len(sortingArray)):
+		currentValue = 0
+		for ind in range(len(sortingArray) - 1):
+			if sortingArray[ind] > sortingArray[ind + 1]:
+				currentValue = sortingArray[ind]
+				sortingArray[ind] = sortingArray[ind + 1]
+				sortingArray[ind + 1] = currentValue
 
+	print(f"Your sorted array is : {sortingArray}")
 
 # Allows user to select a sorting mechanism
 def Menu(Array):
@@ -20,7 +33,6 @@ def Menu(Array):
 		print("Choice not available")
 		Return(Array)
 
-
 # When a user wants to go back to the Menu
 def Return(Array):
 	request = input("Return to Menu?(y/n)")
@@ -30,10 +42,9 @@ def Return(Array):
 	elif request.Upper() == "N":
 		print("Good bye!")
 
-
 if __name__ ==  "__main__":
 	userArray = []
-	arrayLen = int(input("Number of elements in array : "))
+	arrayLen = int(input(f"Number of elements in array : "))
 	Counter = arrayLen
 
 	# Allows user to fill array with data
