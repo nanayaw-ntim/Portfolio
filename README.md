@@ -11,7 +11,7 @@ Here's a list of all the things here:
    - [x] Bubble Sort
 
 2. Searching Algorithms
-   - [ ] Binary Search
+   - [x] Binary Search
    - [x] Linear Search
 
 3. Tiny programs
