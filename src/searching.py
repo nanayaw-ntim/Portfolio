@@ -1,4 +1,4 @@
-# Scans through all the elements in an array for a wanted number
+# Scans through all elements for a wanted number
 def LinearSearch(Array):
     print(Array)
     itemWanted = int(input("Please select a number you want : "))
@@ -18,6 +18,32 @@ def LinearSearch(Array):
     else:
         print("Item not in store")
 
+# Scans through elements by mid for wanted number
+def BinarySearch(Array):
+    upperBound = len(Array)
+    lowerBound = 0
+    count = 0
+    itemWanted = int(input("Enter Number : "))
+
+    while count < len(Array) - 1:
+
+        midpoint = round(lowerBound + ((upperBound - lowerBound) / 2))
+
+        if lowerBound > upperBound:
+            print("Item not in store")
+            break
+
+        else:
+            if Array[midpoint] == itemWanted:
+                print(f"Item found at index {midpoint}")
+                break
+
+            elif Array[midpoint] > itemWanted:
+                upperBound = midpoint - 1
+
+            elif Array[midpoint] < itemWanted:
+                lowerBound = midpoint + 1
+
 # Allows user to select a searching mechanism
 def Menu(Array):
     print("Searching Mechanisms Available\n"
@@ -30,7 +56,7 @@ def Menu(Array):
     if choice == 1:
         LinearSearch(Array)
     elif choice == 2:
-        print("Coming Soon...")
+        BinarySearch(Array)
     else:
         print("Choice not available")
         Return(Array)
