@@ -18,6 +18,24 @@ def LinearSearch(Array):
     else:
         print("Item not in store")
 
+# Scans through circularly sorted arrays
+def circularArraySearch(CircularArray):
+    lowerBound = 0
+    upperBound = len(CircularArray)
+    itemWanted = int(input("Enter Number : "))
+
+    while lowerBound < upperBound:
+        midpoint = lowerBound + round((upperBound - low) / 2)
+
+        if CircularArray[midpoint] == itemWanted:
+            print(f"Item found at index {midpoint}")
+            break
+
+        if CircularArray[lowerBound] <= CircularArray[midpoint]:
+            if itemWanted >= CircularArray[lowerBound]:
+                # This needs to be worked on immediately
+                pass
+
 # Scans through elements by mid for wanted number
 def BinarySearch(Array):
     upperBound = len(Array)

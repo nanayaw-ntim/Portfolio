@@ -1,5 +1,3 @@
-""" Structure your code well """
-
 # Sorts array given using relatively unreliable speed
 def BubbleSort(Array):
 	sortingArray = Array
@@ -15,6 +13,10 @@ def BubbleSort(Array):
 				sortingArray[ind + 1] = currentValue
 
 	print(f"Your sorted array is : {sortingArray}")
+
+# Sort array with O(logN) sorting method
+def InsertionSort(Array):
+	pass
 
 # Allows user to select a sorting mechanism
 def Menu(Array):
@@ -42,6 +44,7 @@ def Return(Array):
 	elif request.Upper() == "N":
 		print("Good bye!")
 
+# Main container for running functions
 if __name__ ==  "__main__":
 	userArray = []
 	arrayLen = int(input(f"Number of elements in array : "))
