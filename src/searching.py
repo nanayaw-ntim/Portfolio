@@ -19,6 +19,7 @@ def LinearSearch(Array):
         print("Item not in store")
 
 # Scans through circularly sorted arrays very fast
+# Scans through circularly sorted arrays very fast
 def CircularSearch(Array):
     lowerBound = 0
     upperBound = len(Array)
@@ -28,8 +29,7 @@ def CircularSearch(Array):
         midpoint = lowerBound + round((upperBound - lowerBound) / 2)
 
         if Array[midpoint] == itemWanted:
-            print(f"Element found at index {midpoint}")
-            break
+            return f"Element found at index {midpoint}"
 
         if Array[lowerBound] <= Array[midpoint]:
             if Array[lowerBound] <= itemWanted < itemWanted[midpoint]:
