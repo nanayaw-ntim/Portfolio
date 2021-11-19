@@ -18,23 +18,31 @@ def LinearSearch(Array):
     else:
         print("Item not in store")
 
-# Scans through circularly sorted arrays
-def circularArraySearch(CircularArray):
+# Scans through circularly sorted arrays very fast
+def CircularSearch(Array):
     lowerBound = 0
-    upperBound = len(CircularArray)
+    upperBound = len(Array)
     itemWanted = int(input("Enter Number : "))
 
     while lowerBound < upperBound:
-        midpoint = lowerBound + round((upperBound - low) / 2)
+        midpoint = lowerBound + round((upperBound - lowerBound) / 2)
 
-        if CircularArray[midpoint] == itemWanted:
-            print(f"Item found at index {midpoint}")
+        if Array[midpoint] == itemWanted:
+            print(f"Element found at index {midpoint}")
             break
 
-        if CircularArray[lowerBound] <= CircularArray[midpoint]:
-            if itemWanted >= CircularArray[lowerBound]:
-                # This needs to be worked on immediately
-                pass
+        if Array[lowerBound] <= Array[midpoint]:
+            if Array[lowerBound] <= itemWanted < itemWanted[midpoint]:
+                upperBound = midpoint
+            else:
+                lowerBound = midpoint + 1
+        else:
+            if Array[upperBound - 1] >= target > Array[midpoint]:
+                lowerBound = midpoint + 1
+            else:
+                upperBound = midpoint
+
+    return -1
 
 # Scans through elements by mid for wanted number
 def BinarySearch(Array):
@@ -66,7 +74,8 @@ def BinarySearch(Array):
 def Menu(Array):
     print("Searching Mechanisms Available\n"
           "1. Linear Search\n"
-          "2. Binary Search\n\n"
+          "2. Binary Search\n"
+          "3. Circular Array\n\n"
           "Select an option with the number in front of it")
 
     choice = int(input("> "))
@@ -75,6 +84,8 @@ def Menu(Array):
         LinearSearch(Array)
     elif choice == 2:
         BinarySearch(Array)
+    elif choice == 3:
+        CircularSearch(Array)
     else:
         print("Choice not available")
         Return(Array)
