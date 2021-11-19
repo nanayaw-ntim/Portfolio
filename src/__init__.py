@@ -1,5 +1,4 @@
-import sorting
-import searching
+from sorting import BubbleSort
 
 def Menu():
     print("########### Main Menu ###########")
