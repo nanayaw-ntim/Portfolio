@@ -13,7 +13,8 @@ Here's a list of all the things here:
 2. Searching Algorithms
    - [x] Binary Search
    - [x] Linear Search
-
+   - [x] Circular Search
+   
 3. Tiny programs
    - [ ] Advanced Guessing Game
 
