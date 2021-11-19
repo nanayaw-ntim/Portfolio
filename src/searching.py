@@ -26,7 +26,7 @@ def CircularSearch(Array):
     itemWanted = int(input("Enter Number : "))
 
     while lowerBound < upperBound:
-        midpoint = lowerBound + round((upperBound - lowerBound) / 2)
+        midpoint = lowerBound + (upperBound - lowerBound) // 2
 
         if Array[midpoint] == itemWanted:
             return f"Element found at index {midpoint}"
