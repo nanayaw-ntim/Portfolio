@@ -18,6 +18,9 @@ def BubbleSort(Array):
 def InsertionSort(Array):
 	pass
 
+def QuickSort(Array):
+	pass
+
 # Allows user to select a sorting mechanism
 def Menu(Array):
 	print("Sorting Mechanisms Available\n"
