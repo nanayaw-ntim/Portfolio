@@ -31,5 +31,9 @@ def NumberGuessing():
         print("Please make sure your low is greater than your high")
         NumberGuessing()
 
+# Computer takes a random letter and user has to guess that letter
+def LetterGuessing():
+    pass
+
 if __name__ == "__main__":
     print(NumberGuessing())
