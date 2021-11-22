@@ -1,3 +1,4 @@
+# Required imports
 from random import randint
 
 # Allows users to play a game with the computer
@@ -25,7 +26,7 @@ def NumberGuessing():
                 print("Your guess is too low")
 
         if counter >= 5:
-            return "You've used up all your tries. You lose"
+            return "You've used up all your tries. You lose!"
 
     if low > high:
         print("Please make sure your low is greater than your high")
@@ -33,7 +34,26 @@ def NumberGuessing():
 
 # Computer takes a random letter and user has to guess that letter
 def LetterGuessing():
-    pass
+    Letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+               "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
+               "W", "X", "Y", "Z"]
+    selectedIndex = randint(0, 25)
+    computerGuess = Letters[selectedIndex]
+    counter = 0
+
+    for i in range(5):
+        userGuess = str(input("Input A Letter : "))
+
+        if userGuess.upper() == computerGuess.upper():
+            counter += 1
+            return f"Correct! You used {counter} out of 5 guesses"
+
+        else:
+            counter += 1
+            print("Incorrect!")
+
+    if counter >= 5:
+        return f"The correct letter was {computerGuess}. You lost!"
 
 if __name__ == "__main__":
-    print(NumberGuessing())
+    print(LetterGuessing())
