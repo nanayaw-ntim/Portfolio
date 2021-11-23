@@ -15,7 +15,7 @@ def NumberGuessing():
 
             if userGuess == computerGuess:
                 counter += 1
-                return f"Correct! You used {counter} out of 5 guesses"
+                return f"Correct! {counter} out of 5 guesses used"
 
             elif userGuess > computerGuess:
                 counter += 1
@@ -26,17 +26,17 @@ def NumberGuessing():
                 print("Your guess is too low")
 
         if counter >= 5:
-            return "You've used up all your tries. You lose!"
+            return "All tried used. You lose!"
 
     if low > high:
-        print("Please make sure your low is greater than your high")
+        print("Upper must be greater than Lower")
         NumberGuessing()
 
 # Computer takes a random letter and user has to guess that letter
 def LetterGuessing():
-    Letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
-               "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-               "W", "X", "Y", "Z"]
+    Letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+               "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+               "U", "V", "W", "X", "Y", "Z"]
     selectedIndex = randint(0, 25)
     computerGuess = Letters[selectedIndex]
     counter = 0
@@ -46,14 +46,14 @@ def LetterGuessing():
 
         if userGuess.upper() == computerGuess.upper():
             counter += 1
-            return f"Correct! You used {counter} out of 5 guesses"
+            return f"Correct! {counter} out of 5 guesses used"
 
         else:
             counter += 1
             print("Incorrect!")
 
     if counter >= 5:
-        return f"The correct letter was {computerGuess}. You lost!"
+        return f"Answer was {computerGuess}. You lost!"
 
 if __name__ == "__main__":
     print(LetterGuessing())
