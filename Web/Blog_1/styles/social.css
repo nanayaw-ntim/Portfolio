@@ -1,0 +1,15 @@
+.share {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.share img{
+    padding: 0.75rem;
+    width:   1.50rem;
+    height:  1.50rem;
+}
+
+
+/* <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="response/app.js"></script> */

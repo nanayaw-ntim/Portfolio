@@ -1,0 +1,23 @@
+:root { font: 20px/1.2 "Roboto", sans-serif; } /* HTML */
+
+body,
+body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+figure * { display: block; }
+
+/* Allows us to fully reset the website's already set values. This is so...
+
+1. No surprise values are located
+
+2. No errors in code we thought would work with the reset
+
+3. Everything will manually be done from scratch
+
+Further code to be added in the near future */
