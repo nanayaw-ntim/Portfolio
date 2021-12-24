@@ -3,6 +3,11 @@ from random import randint
 
 # Allows users to play a game with the computer
 def NumberGuessing():
+    # User can now select difficulty
+    print("Please select a mode"
+          "1. Easy"
+          "2. Hard")
+    choice = int(input("> "))
     low = int(input("Enter the lower number : "))
     high = int(input("Enter the upper number : "))
     computerGuess = randint(low, high)
@@ -54,6 +59,10 @@ def LetterGuessing():
 
     if counter >= 5:
         return f"Answer was {computerGuess}. You lost!"
+
+# Takes care of all the games for user to select
+def GamesMenu():
+    pass
 
 if __name__ == "__main__":
     print(LetterGuessing())
