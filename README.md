@@ -1,6 +1,4 @@
-![Top Image](Assets/Background.png)
-
-# Personal Projects
+# Elemental Programming
 
 This repository was made to store all my tiny projects.
 
